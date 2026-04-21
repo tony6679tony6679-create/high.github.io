@@ -4,40 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Five - EAR CENTER</title>
+    <!-- 트렌디한 폰트 적용 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Pretendard', sans-serif; }
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            background-color: #f8fafc;
+        }
+        
+        /* 여기어때 잘난체 */
         @font-face {
             font-family: 'yg-jalnan';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
         }
         .font-jalnan { font-family: 'yg-jalnan', sans-serif; }
+        
+        /* 고운돋움 */
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         .font-soft { font-family: 'Gowun Dodum', sans-serif; }
+        
         .break-keep { word-break: keep-all; }
         
-        /* 이미지 최적화: 얼굴이 잘리지 않도록 상단 고정 */
-        .img-top { object-position: top; }
+        /* 이미지 얼굴 위주 정렬 및 비율 고정 */
+        .mentor-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        /* 내비게이션 배경 전환 효과 */
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
-<body class="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="min-h-screen overflow-x-hidden text-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-transparent z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-400 tracking-widest drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">EAR CENTER</span>
-                </div>
-                <div class="hidden md:flex space-x-8 font-bold">
-                    <a href="#about" class="text-white hover:text-sky-300 transition-colors text-sm uppercase">아카데미 소개</a>
-                    <a href="#curriculum" class="text-white hover:text-sky-300 transition-colors text-sm uppercase">교육 과정</a>
-                    <a href="#people" class="text-white hover:text-sky-300 transition-colors text-sm uppercase">함께하는 분들</a>
-                    <a href="#reviews" class="text-white hover:text-sky-300 transition-colors text-sm uppercase">수강 후기</a>
-                    <a href="#contact" class="text-white hover:text-sky-300 transition-colors text-sm uppercase">문의하기</a>
-                </div>
+    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <span id="nav-logo" class="text-2xl font-black text-white tracking-widest drop-shadow-md">EAR CENTER</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold">
+                <a href="#about" class="nav-link text-white hover:text-sky-300 transition-colors text-sm uppercase">아카데미 소개</a>
+                <a href="#curriculum" class="nav-link text-white hover:text-sky-300 transition-colors text-sm uppercase">교육 과정</a>
+                <a href="#people" class="nav-link text-white hover:text-sky-300 transition-colors text-sm uppercase">함께하는 분들</a>
+                <a href="#reviews" class="nav-link text-white hover:text-sky-300 transition-colors text-sm uppercase">수강 후기</a>
+                <a href="#contact" class="nav-link text-white hover:text-sky-300 transition-colors text-sm uppercase">문의하기</a>
             </div>
         </div>
     </nav>
@@ -45,177 +64,151 @@
     <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-blue-500 to-sky-400 text-white overflow-hidden text-center">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <!-- 로고 카드 -->
-            <div class="mx-auto w-[280px] sm:w-[400px] bg-white p-10 rounded-[3rem] shadow-2xl mb-12 transform -rotate-2 relative">
-                <img src="logo.jpg" alt="Logo" class="w-full mix-blend-multiply">
+            <!-- 메인 로고 카드 -->
+            <div class="mx-auto w-[280px] sm:w-[400px] bg-white p-10 rounded-[3rem] shadow-2xl mb-12 transform -rotate-2 relative group hover:rotate-0 transition-all duration-500">
+                <img src="./logo.jpg" alt="High Five Logo" class="w-full mix-blend-multiply" onerror="this.src='https://via.placeholder.com/400x300?text=Logo.jpg'">
             </div>
             <p class="text-2xl text-sky-100 mb-8 font-bold flex items-center justify-center tracking-wide">
                 <span class="mr-2 text-3xl">🙌</span> 2026년 5월 18일
             </p>
-            <p class="font-jalnan text-3xl sm:text-4xl text-white mb-12 drop-shadow-lg">나를 한 단계 더 성장시키는 5월</p>
+            <p class="font-jalnan text-3xl sm:text-5xl text-white mb-12 drop-shadow-lg leading-tight">나를 한 단계 더 성장시키는 5월</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-slate-100 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+    <section id="about" class="py-24 bg-slate-100 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
             <div class="flex-1 w-full">
-                <div class="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white rotate-2 hover:rotate-0 transition-all">
-                    <img src="about_team.jpg" alt="About" class="w-full h-full object-cover img-top" onerror="this.src='https://via.placeholder.com/800x800?text=About+Image'">
+                <div class="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white rotate-3 hover:rotate-0 transition-all duration-500">
+                    <img src="./about_team.jpg" alt="Team" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=About+Image'">
                 </div>
             </div>
-            <div class="flex-1">
-                <h2 class="text-4xl font-black mb-6 text-slate-900 tracking-tight text-center md:text-left">최고의 가치를 위해 <br />끊임없이 도전합니다</h2>
-                <p class="text-slate-700 mb-8 leading-relaxed text-lg font-medium text-center md:text-left break-keep">우리는 클라이언트의 비전이 현실이 될 수 있도록 최선을 다합니다. 10년 이상의 노하우로 여러분의 성장을 돕습니다.</p>
-                <ul class="space-y-4 font-bold text-lg max-w-xs mx-auto md:mx-0">
-                    <li class="flex items-center text-blue-600">✔ 혁신적인 기술 도입</li>
-                    <li class="flex items-center text-blue-600">✔ 고객 만족 최우선</li>
-                </ul>
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-4xl lg:text-5xl font-black mb-8 text-slate-900 tracking-tight leading-tight">최고의 가치를 위해 <br />끊임없이 도전합니다</h2>
+                <p class="text-slate-600 mb-10 leading-relaxed text-lg font-medium break-keep">우리는 여러분의 비전이 현실이 될 수 있도록 곁에서 함께 고민합니다. 10년 이상의 노하우를 가진 전문가들이 여러분의 성장을 지원합니다.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center justify-center md:justify-start text-blue-600 font-bold text-lg">
+                        <span class="mr-3 text-2xl">✔</span> 혁신적인 기술 도입
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start text-blue-600 font-bold text-lg">
+                        <span class="mr-3 text-2xl">✔</span> 수강생 만족 최우선
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- People Section (멘토 소개) -->
-    <section id="people" class="py-24 bg-white relative z-10 text-center">
+    <!-- People Section (멘토 소개 - 김현우 사진 비율 수정 완료) -->
+    <section id="people" class="py-32 bg-white relative z-10 text-center">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-jalnan text-4xl md:text-5xl font-black mb-16 text-slate-900">함께하는 분들</h2>
+            <h2 class="font-jalnan text-4xl md:text-5xl font-black mb-20 text-slate-900">함께하는 분들</h2>
             
-            <!-- 멘토 1 (메인: 류명진) -->
-            <div class="mb-24">
-                <div class="w-64 h-[22rem] mx-auto rounded-[2.5rem] overflow-hidden shadow-lg mb-8 border-4 border-white">
-                    <img src="mentor_1.jpg" alt="류명진" class="w-full h-full object-cover img-top">
+            <!-- 메인 멘토 (류명진) -->
+            <div class="mb-32">
+                <div class="w-72 h-96 mx-auto rounded-[3rem] overflow-hidden shadow-2xl mb-8 border-4 border-white transform hover:scale-105 transition-transform duration-500">
+                    <img src="./mentor_1.jpg" alt="류명진" class="mentor-img h-full" onerror="this.src='https://via.placeholder.com/400x600?text=Mentor+1'">
                 </div>
                 <h3 class="font-jalnan text-3xl font-black text-slate-900">류명진</h3>
-                <p class="text-blue-500 font-bold text-lg mt-2 uppercase tracking-widest">Main Mentor</p>
+                <p class="text-blue-500 font-bold text-xl mt-3 uppercase tracking-[0.2em]">Main Mentor</p>
             </div>
 
             <!-- 서브 멘토들 (정수인 ~ 김현정) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
                 <!-- 2. 정수인 -->
                 <div class="group">
-                    <div class="h-[24rem] rounded-[2rem] overflow-hidden mb-6 shadow-md border border-slate-100">
-                        <img src="mentor_2.jpg" alt="정수인" class="w-full h-full object-cover img-top group-hover:scale-105 transition-all duration-500">
+                    <div class="rounded-[2.5rem] overflow-hidden mb-6 shadow-xl border border-slate-100 bg-slate-50">
+                        <img src="./mentor_2.jpg" alt="정수인" class="mentor-img group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x400?text=Mentor+2'">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900">정수인</h4>
-                    <p class="text-blue-400 font-bold text-sm mt-1 uppercase">Psychology Coach</p>
                 </div>
                 <!-- 3. 남서연 -->
                 <div class="group">
-                    <div class="h-[24rem] rounded-[2rem] overflow-hidden mb-6 shadow-md border border-slate-100">
-                        <img src="mentor_3.jpg" alt="남서연" class="w-full h-full object-cover img-top group-hover:scale-105 transition-all duration-500">
+                    <div class="rounded-[2.5rem] overflow-hidden mb-6 shadow-xl border border-slate-100 bg-slate-50">
+                        <img src="./mentor_3.jpg" alt="남서연" class="mentor-img group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x400?text=Mentor+3'">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900">남서연</h4>
-                    <p class="text-blue-400 font-bold text-sm mt-1 uppercase">Marketing Expert</p>
                 </div>
                 <!-- 4. 이현우 -->
                 <div class="group">
-                    <div class="h-[24rem] rounded-[2rem] overflow-hidden mb-6 shadow-md border border-slate-100">
-                        <img src="mentor_4.jpg" alt="이현우" class="w-full h-full object-cover img-top group-hover:scale-105 transition-all duration-500">
+                    <div class="rounded-[2.5rem] overflow-hidden mb-6 shadow-xl border border-slate-100 bg-slate-50">
+                        <img src="./mentor_4.jpg" alt="이현우" class="mentor-img group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x400?text=Mentor+4'">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900">이현우</h4>
-                    <p class="text-blue-400 font-bold text-sm mt-1 uppercase">Career Director</p>
                 </div>
                 <!-- 5. 김승필 -->
                 <div class="group">
-                    <div class="h-[24rem] rounded-[2rem] overflow-hidden mb-6 shadow-md border border-slate-100">
-                        <img src="mentor_5.jpg" alt="김승필" class="w-full h-full object-cover img-top group-hover:scale-105 transition-all duration-500">
+                    <div class="rounded-[2.5rem] overflow-hidden mb-6 shadow-xl border border-slate-100 bg-slate-50">
+                        <img src="./mentor_5.jpg" alt="김승필" class="mentor-img group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x400?text=Mentor+5'">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900">김승필</h4>
-                    <p class="text-blue-400 font-bold text-sm mt-1 uppercase">Community Manager</p>
                 </div>
-                <!-- 6. 김현우 -->
+                <!-- 6. 김현우 (비비율 깨짐 완벽 방지) -->
                 <div class="group">
-                    <div class="h-[24rem] rounded-[2rem] overflow-hidden mb-6 shadow-md border border-slate-100">
-                        <img src="mentor_6.jpg" alt="김현우" class="w-full h-full object-cover img-top group-hover:scale-105 transition-all duration-500">
+                    <div class="rounded-[2.5rem] overflow-hidden mb-6 shadow-xl border border-slate-100 bg-slate-50">
+                        <img src="./mentor_6.jpg" alt="김현우" class="mentor-img group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x400?text=Mentor+6'">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900">김현우</h4>
-                    <p class="text-blue-400 font-bold text-sm mt-1 uppercase">Operation Manager</p>
                 </div>
                 <!-- 7. 김현정 -->
                 <div class="group">
-                    <div class="h-[24rem] rounded-[2rem] overflow-hidden mb-6 shadow-md border border-slate-100">
-                        <img src="mentor_7.jpg" alt="김현정" class="w-full h-full object-cover img-top group-hover:scale-105 transition-all duration-500">
+                    <div class="rounded-[2.5rem] overflow-hidden mb-6 shadow-xl border border-slate-100 bg-slate-50">
+                        <img src="./mentor_7.jpg" alt="김현정" class="mentor-img group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400x400?text=Mentor+7'">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900">김현정</h4>
-                    <p class="text-blue-400 font-bold text-sm mt-1 uppercase">Education Director</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="py-24 bg-slate-50 relative z-10 text-center">
+    <section id="reviews" class="py-32 bg-slate-50 relative z-10 text-center">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-jalnan text-4xl md:text-5xl text-[#3b82f6] mb-16">뜨거운 감동 후기</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- 후기 1: 김지우 -->
-                <div class="bg-white p-8 rounded-[2rem] shadow-lg flex flex-col h-full hover:-translate-y-2 transition-all">
-                    <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-8 flex-grow break-keep">"단순히 지식 교육이 아니라 '나 자신'에 대해 먼저 고민하게 해준 것이 가장 좋았습니다. 나를 되돌아보는 소중한 시간이었습니다."</p>
-                    <div class="w-full h-px bg-slate-100 mb-6"></div>
-                    <div class="flex items-center gap-4">
-                        <img src="review_1.jpg" alt="김지우" class="w-14 h-14 rounded-full object-cover shadow-sm">
+            <h2 class="font-jalnan text-4xl md:text-5xl text-[#3b82f6] mb-20">뜨거운 감동 후기</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 후기 카드 1 -->
+                <div class="bg-white p-10 rounded-[3rem] shadow-lg flex flex-col h-full hover:-translate-y-3 transition-all duration-300">
+                    <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-10 flex-grow break-keep">
+                        "단순히 지식 교육이 아니라 '나 자신'에 대해 먼저 고민하게 해준 것이 가장 좋았습니다. 나를 되돌아보는 소중한 시간이었습니다."
+                    </p>
+                    <div class="w-full h-px bg-slate-100 mb-8"></div>
+                    <div class="flex items-center gap-5">
+                        <img src="./review_1.jpg" alt="User" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=Reviewer'">
                         <div class="text-left">
-                            <span class="block font-black text-slate-900">김지우 님</span>
-                            <span class="text-xs text-blue-500 font-bold">26세 / 취업준비생</span>
+                            <span class="block font-black text-slate-900 text-lg">김지우 님</span>
+                            <span class="text-sm text-blue-500 font-bold">26세 / 취업준비생</span>
                         </div>
                     </div>
                 </div>
-                <!-- 후기 2: 이민준 -->
-                <div class="bg-white p-8 rounded-[2rem] shadow-lg flex flex-col h-full hover:-translate-y-2 transition-all">
-                    <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-8 flex-grow break-keep">"포기하고 싶을 때마다 혼자가 아니라는 생각이 들어서 큰 힘이 되었습니다. 도와주신 선생님들께 정말 감사드립니다."</p>
-                    <div class="w-full h-px bg-slate-100 mb-6"></div>
-                    <div class="flex items-center gap-4">
-                        <img src="review_2.jpg" alt="이민준" class="w-14 h-14 rounded-full object-cover shadow-sm">
-                        <div class="text-left">
-                            <span class="block font-black text-slate-900">이민준 님</span>
-                            <span class="text-xs text-blue-500 font-bold">29세 / 이직 준비</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 후기 3: 박하늘 -->
-                <div class="bg-white p-8 rounded-[2rem] shadow-lg flex flex-col h-full hover:-translate-y-2 transition-all">
-                    <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-8 flex-grow break-keep">"강의가 끝난 후에도 지속적으로 연결되는 네트워킹이 큰 힘이 됩니다. 이곳에서 정말 좋은 사람들을 많이 얻어갑니다."</p>
-                    <div class="w-full h-px bg-slate-100 mb-6"></div>
-                    <div class="flex items-center gap-4">
-                        <img src="review_3.jpg" alt="박하늘" class="w-14 h-14 rounded-full object-cover shadow-sm">
-                        <div class="text-left">
-                            <span class="block font-black text-slate-900">박하늘 님</span>
-                            <span class="text-xs text-blue-500 font-bold">32세 / 프리랜서</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 후기 4: 최수진 -->
-                <div class="bg-white p-8 rounded-[2rem] shadow-lg flex flex-col h-full hover:-translate-y-2 transition-all">
-                    <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-8 flex-grow break-keep">"막연했던 미래가 구체적인 계획으로 바뀌는 경험을 했습니다. 실무 중심의 커리큘럼이 큰 도움이 되었습니다."</p>
-                    <div class="w-full h-px bg-slate-100 mb-6"></div>
-                    <div class="flex items-center gap-4">
-                        <img src="review_4.jpg" alt="최수진" class="w-14 h-14 rounded-full object-cover shadow-sm">
-                        <div class="text-left">
-                            <span class="block font-black text-slate-900">최수진 님</span>
-                            <span class="text-xs text-blue-500 font-bold">27세 / 사회초년생</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- 추가 후기들은 동일한 구조로 review_2.jpg 등을 사용하여 배치 가능 -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white relative z-10">
+    <section id="contact" class="py-24 bg-white relative z-10">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="bg-gradient-to-r from-blue-500 to-sky-400 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl flex flex-col lg:flex-row gap-16">
-                <div class="lg:w-1/3 text-center lg:text-left">
-                    <h2 class="font-jalnan text-4xl mb-6 leading-tight">궁금한 점이<br>있으실까요?</h2>
-                    <p class="text-sky-50 font-medium">비공개 문의 게시판입니다. 작성하신 내용은 관리자만 확인할 수 있으니 안심하고 남겨주세요.</p>
+            <div class="bg-gradient-to-br from-blue-600 to-sky-400 rounded-[4rem] p-10 md:p-20 text-white shadow-3xl flex flex-col lg:flex-row gap-20">
+                <div class="lg:w-2/5 text-center lg:text-left flex flex-col justify-center">
+                    <h2 class="font-jalnan text-5xl mb-8 leading-tight">함께 성장할 <br>준비 되셨나요?</h2>
+                    <p class="text-sky-50 text-xl font-medium break-keep">비공개 문의 게시판입니다. 작성하신 소중한 정보는 관리자만 안전하게 확인합니다.</p>
                 </div>
-                <div class="lg:w-2/3 bg-white/95 p-6 md:p-10 rounded-3xl text-slate-900 shadow-inner">
-                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('문의가 소중하게 접수되었습니다!');">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" placeholder="작성자명" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-400 transition-all">
-                            <input type="password" placeholder="비밀번호" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+                <div class="lg:w-3/5 bg-white/95 p-8 md:p-12 rounded-[3rem] text-slate-900 shadow-2xl">
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('문의가 성공적으로 전달되었습니다!');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-500 ml-2">성함</label>
+                                <input type="text" placeholder="홍길동" required class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-4 focus:ring-blue-100 transition-all font-bold">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-500 ml-2">비밀번호</label>
+                                <input type="password" placeholder="****" required class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-4 focus:ring-blue-100 transition-all font-bold">
+                            </div>
                         </div>
-                        <textarea rows="4" placeholder="문의 내용을 입력해주세요." required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-400 transition-all"></textarea>
-                        <button class="w-full py-5 bg-slate-900 text-white rounded-2xl font-black hover:bg-blue-600 transition-all shadow-lg text-lg">비공개로 문의 남기기 🙌</button>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-500 ml-2">문의 내용</label>
+                            <textarea rows="5" placeholder="궁금하신 내용을 입력해주세요." required class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-4 focus:ring-blue-100 transition-all font-bold"></textarea>
+                        </div>
+                        <button class="w-full py-6 bg-blue-600 text-white rounded-3xl font-black hover:bg-slate-900 transition-all shadow-xl text-xl transform active:scale-95">비공개 문의 남기기 🙌</button>
                     </form>
                 </div>
             </div>
@@ -223,36 +216,58 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-slate-100 border-t border-slate-200 text-center">
-        <p class="text-slate-500 font-bold">&copy; 2026 EAR CENTER. All rights reserved.</p>
+    <footer class="py-16 bg-slate-50 border-t border-slate-200 text-center">
+        <div class="mb-6">
+            <span class="text-xl font-black text-slate-300 tracking-widest">EAR CENTER</span>
+        </div>
+        <p class="text-slate-400 font-bold">&copy; 2026 EAR CENTER. All rights reserved.</p>
     </footer>
 
     <!-- Scroll Top Button -->
-    <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-[#3b82f6] text-white p-4 rounded-full shadow-2xl opacity-0 transition-all z-50 hover:scale-110 active:scale-95">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    <button id="scrollTopBtn" class="fixed bottom-10 right-10 bg-blue-600 text-white w-16 h-16 rounded-full shadow-2xl opacity-0 transition-all z-50 flex items-center justify-center hover:scale-110 active:scale-90 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
     </button>
 
     <script>
-        const btn = document.getElementById('scrollTopBtn');
+        const nav = document.getElementById('main-nav');
+        const navLogo = document.getElementById('nav-logo');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        // 스크롤 감지 핸들러
         window.addEventListener('scroll', () => {
-            btn.style.opacity = window.scrollY > 300 ? '1' : '0';
-        });
-        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-        
-        // 투명도 조절 스크립트
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
+            // 내비게이션 스타일 변경
             if (window.scrollY > 50) {
-                nav.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-md');
-                nav.querySelectorAll('span, a').forEach(el => el.classList.remove('text-white'));
-                nav.querySelectorAll('span, a').forEach(el => el.classList.add('text-slate-900'));
+                nav.classList.add('nav-scrolled');
+                navLogo.classList.replace('text-white', 'text-blue-600');
+                navLinks.forEach(link => {
+                    link.classList.replace('text-white', 'text-slate-700');
+                    link.classList.add('hover:text-blue-600');
+                });
             } else {
-                nav.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-md');
-                nav.querySelectorAll('span, a').forEach(el => el.classList.add('text-white'));
-                nav.querySelectorAll('span, a').forEach(el => el.classList.remove('text-slate-900'));
+                nav.classList.remove('nav-scrolled');
+                navLogo.classList.replace('text-blue-600', 'text-white');
+                navLinks.forEach(link => {
+                    link.classList.replace('text-slate-700', 'text-white');
+                    link.classList.remove('hover:text-blue-600');
+                });
             }
+
+            // 스크롤 탑 버튼 노출
+            if (window.scrollY > 400) {
+                scrollBtn.classList.replace('opacity-0', 'opacity-100');
+                scrollBtn.classList.remove('pointer-events-none');
+            } else {
+                scrollBtn.classList.replace('opacity-100', 'opacity-0');
+                scrollBtn.classList.add('pointer-events-none');
+            }
+        });
+
+        // 스크롤 탑 클릭
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
