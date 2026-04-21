@@ -42,9 +42,9 @@
     <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-blue-500 to-sky-400 text-white overflow-hidden text-center">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <!-- 로고 카드: 경로를 현재 위치의 logo.jpg로 수정 -->
+            <!-- 로고: 캡처본의 logo.jpg 파일명 반영 -->
             <div class="mx-auto w-[280px] sm:w-[400px] bg-white p-10 rounded-[3rem] shadow-2xl mb-12 transform -rotate-2 relative">
-                <img src="./logo.jpg" alt="Logo" class="w-full mix-blend-multiply" onerror="this.src='https://via.placeholder.com/400x200?text=Logo+Missing'">
+                <img src="logo.jpg" alt="Logo" class="w-full mix-blend-multiply">
             </div>
             <p class="text-2xl text-sky-100 mb-8 font-bold flex items-center justify-center tracking-wide">
                 <span class="mr-2 text-3xl">🙌</span> 2026년 5월 18일
@@ -58,8 +58,8 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
             <div class="flex-1 w-full">
                 <div class="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white rotate-2 hover:rotate-0 transition-all">
-                    <!-- 아카데미 소개 이미지도 경로 수정이 필요할 수 있습니다 -->
-                    <img src="./about_team.jpg" alt="About" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=About+Image+Missing'">
+                    <!-- 아카데미 소개 이미지 (about_team.jpg 파일이 루트에 있어야 함) -->
+                    <img src="about_team.jpg" alt="About" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=About+Image+Coming+Soon'">
                 </div>
             </div>
             <div class="flex-1">
@@ -78,50 +78,38 @@
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="font-jalnan text-4xl md:text-5xl font-black mb-16">함께하는 분들</h2>
             
-            <!-- Main Mentor: 경로에서 images/ 제거 -->
+            <!-- 멘토 1 (류명진) -->
             <div class="mb-24">
                 <div class="w-64 h-[22rem] mx-auto rounded-[2.5rem] overflow-hidden shadow-lg mb-8 border-4 border-white">
-                    <img src="./mentor_1.jpg" alt="류명진" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x600?text=Mentor1+Missing'">
+                    <img src="mentor_1.jpg" alt="류명진" class="w-full h-full object-cover">
                 </div>
                 <h3 class="font-jalnan text-3xl font-black">류명진 (Main Mentor)</h3>
             </div>
 
-            <!-- Sub Mentors: 경로 수정 -->
+            <!-- 서브 멘토들 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="group">
-                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md">
-                        <img src="./mentor_2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x500?text=Mentor2+Missing'">
-                    </div>
+                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md"><img src="mentor_2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all"></div>
                     <h4 class="font-jalnan text-xl font-bold">정수인</h4>
                 </div>
                 <div class="group">
-                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md">
-                        <img src="./mentor_3.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x500?text=Mentor3+Missing'">
-                    </div>
+                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md"><img src="mentor_3.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all"></div>
                     <h4 class="font-jalnan text-xl font-bold">남서연</h4>
                 </div>
                 <div class="group">
-                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md">
-                        <img src="./mentor_4.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x500?text=Mentor4+Missing'">
-                    </div>
+                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md"><img src="mentor_4.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all"></div>
                     <h4 class="font-jalnan text-xl font-bold">이현우</h4>
                 </div>
                 <div class="group">
-                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md">
-                        <img src="./mentor_5.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x500?text=Mentor5+Missing'">
-                    </div>
+                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md"><img src="mentor_5.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all"></div>
                     <h4 class="font-jalnan text-xl font-bold">김승필</h4>
                 </div>
                 <div class="group">
-                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md">
-                        <img src="./mentor_6.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x500?text=Mentor6+Missing'">
-                    </div>
+                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md"><img src="mentor_6.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all"></div>
                     <h4 class="font-jalnan text-xl font-bold">김현우</h4>
                 </div>
                 <div class="group">
-                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md">
-                        <img src="./mentor_7.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x500?text=Mentor7+Missing'">
-                    </div>
+                    <div class="h-80 rounded-[2rem] overflow-hidden mb-6 shadow-md"><img src="mentor_7.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all"></div>
                     <h4 class="font-jalnan text-xl font-bold">김현정</h4>
                 </div>
             </div>
@@ -136,7 +124,8 @@
                 <div class="bg-white p-8 rounded-[2rem] shadow-sm flex flex-col h-full hover:-translate-y-2 transition-all">
                     <p class="font-soft text-slate-700 text-lg leading-loose mb-8 flex-grow break-keep">"나를 되돌아보는 소중한 시간이었습니다."</p>
                     <div class="flex items-center gap-4 justify-center md:justify-start">
-                        <img src="./review_1.jpg" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://via.placeholder.com/100x100?text=User'">
+                        <!-- review_1.jpg 파일이 루트에 있어야 함 -->
+                        <img src="review_1.jpg" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://via.placeholder.com/100x100?text=User'">
                         <span class="font-bold">김지우 님</span>
                     </div>
                 </div>
@@ -148,15 +137,15 @@
     <section id="contact" class="py-20 bg-white relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="bg-gradient-to-r from-blue-500 to-sky-400 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl flex flex-col lg:flex-row gap-16">
-                <div class="lg:w-1/3">
+                <div class="lg:w-1/3 text-center lg:text-left">
                     <h2 class="font-jalnan text-4xl mb-6">1:1 비공개 <br>문의하기</h2>
                     <p class="text-sky-50">작성하신 내용은 관리자만 확인할 수 있습니다.</p>
                 </div>
                 <div class="lg:w-2/3 bg-white/95 p-6 md:p-10 rounded-3xl text-slate-900">
                     <form class="space-y-4" onsubmit="event.preventDefault(); alert('비공개 문의가 접수되었습니다!');">
-                        <input type="text" placeholder="작성자명" required class="w-full p-3 bg-slate-50 border rounded-xl focus:ring-2 focus:ring-blue-400 outline-none">
-                        <input type="password" placeholder="비밀번호" required class="w-full p-3 bg-slate-50 border rounded-xl focus:ring-2 focus:ring-blue-400 outline-none">
-                        <textarea rows="4" placeholder="문의 내용" required class="w-full p-3 bg-slate-50 border rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"></textarea>
+                        <input type="text" placeholder="작성자명" required class="w-full p-3 bg-slate-50 border rounded-xl outline-none focus:ring-2 focus:ring-blue-400">
+                        <input type="password" placeholder="비밀번호" required class="w-full p-3 bg-slate-50 border rounded-xl outline-none focus:ring-2 focus:ring-blue-400">
+                        <textarea rows="4" placeholder="문의 내용" required class="w-full p-3 bg-slate-50 border rounded-xl outline-none focus:ring-2 focus:ring-blue-400"></textarea>
                         <button class="w-full py-4 bg-slate-900 text-white rounded-xl font-black hover:bg-blue-600 transition-all">비공개로 문의 남기기</button>
                     </form>
                 </div>
