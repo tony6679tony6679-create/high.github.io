@@ -27,13 +27,14 @@
         
         .break-keep { word-break: keep-all; }
         
-        /* 멘토 이미지 공통 스타일: 얼굴 위주 정렬 및 확대 */
+        /* 멘토 이미지 공통 스타일: 컨테이너 고정 및 개별 확대 적용 */
         .mentor-img-container {
             width: 100%;
             aspect-ratio: 1 / 1;
             overflow: hidden;
             border-radius: 2.5rem;
             background-color: #f1f5f9;
+            position: relative;
         }
         .mentor-img-container img {
             width: 100%;
@@ -73,8 +74,9 @@
     <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-blue-500 to-sky-400 text-white overflow-hidden text-center">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <!-- 로고: 깃허브 파일명 '로고.jpg' 반영 -->
             <div class="mx-auto w-[280px] sm:w-[400px] bg-white p-10 rounded-[3rem] shadow-2xl mb-12 transform -rotate-2 relative group hover:rotate-0 transition-all duration-500">
-                <img src="./logo.jpg" alt="High Five Logo" class="w-full mix-blend-multiply" onerror="this.src='https://via.placeholder.com/400x300?text=Logo.jpg'">
+                <img src="./로고.jpg" alt="High Five Logo" class="w-full mix-blend-multiply" onerror="this.src='https://via.placeholder.com/400x300?text=로고.jpg+확인필요'">
             </div>
             <p class="text-2xl text-sky-100 mb-8 font-bold flex items-center justify-center tracking-wide">
                 <span class="mr-2 text-3xl">🙌</span> 2026년 5월 18일
@@ -88,12 +90,12 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
             <div class="flex-1 w-full">
                 <div class="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white rotate-3 hover:rotate-0 transition-all duration-500">
-                    <img src="./about_team.jpg" alt="Team" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=About+Image'">
+                    <img src="./about_team.jpg" alt="Team" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=about_team.jpg+업로드필요'">
                 </div>
             </div>
             <div class="flex-1 text-center md:text-left">
                 <h2 class="text-4xl lg:text-5xl font-black mb-8 text-slate-900 tracking-tight leading-tight">최고의 가치를 위해 <br />끊임없이 도전합니다</h2>
-                <p class="text-slate-600 mb-10 leading-relaxed text-lg font-medium break-keep">여러분의 비전이 현실이 될 수 있도록 곁에서 함께 고민합니다. 10년 이상의 노하우를 가진 전문가들이 여러분의 성장을 끝까지 함께하겠습니다.</p>
+                <p class="text-slate-600 mb-10 leading-relaxed text-lg font-medium break-keep">여태까지의 나를 넘어, 진짜 나의 가치를 찾아가는 여정. 10년 이상의 노하우를 가진 전문가들이 여러분의 성장을 끝까지 함께하겠습니다.</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="flex items-center justify-center md:justify-start text-blue-600 font-bold text-lg">
                         <span class="mr-3 text-2xl">✔</span> 혁신적인 기술 도입
@@ -106,7 +108,7 @@
         </div>
     </section>
 
-    <!-- Curriculum Section (Part 01~04 상세 복구 완료) -->
+    <!-- Curriculum Section -->
     <section id="curriculum" class="py-24 bg-white relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -115,7 +117,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-                <!-- Part 01 -->
                 <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 group flex flex-col h-full hover:-translate-y-2 transition-all">
                     <div class="p-8 md:p-10 flex-grow text-center">
                         <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 01</span>
@@ -123,8 +124,6 @@
                         <p class="text-slate-500 leading-relaxed font-medium">끝없는 인문학과 답없는 질문 속에 명쾌한 답을 가진 기준을 가지고 삶과 나 자신을 찾아가는 명쾌한 강연의 시간</p>
                     </div>
                 </div>
-
-                <!-- Part 02 -->
                 <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 group flex flex-col h-full hover:-translate-y-2 transition-all">
                     <div class="p-8 md:p-10 flex-grow text-center">
                         <span class="inline-block px-4 py-1.5 bg-sky-50 text-sky-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 02</span>
@@ -132,18 +131,16 @@
                         <p class="text-slate-500 leading-relaxed font-medium">여태까지 들어왔던 일방적인 강연과 주입식 교육이 아닌 나눔과 질문 소통과 생각을 통한 나의 깨달음을 얻는 시간</p>
                     </div>
                 </div>
-
-                <!-- Part 03 (이미지 콜라주) -->
                 <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 group hover:-translate-y-2 transition-all">
                     <div class="grid grid-cols-2 gap-1 bg-slate-50">
                         <div class="col-span-2 h-56 md:h-64 overflow-hidden relative">
-                            <img src="./curriculum_3_1.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/800x400?text=Outdoor+Activity'">
+                            <img src="./curriculum_3_1.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/800x400?text=사진을+업로드해주세요'">
                         </div>
                         <div class="h-32 md:h-40 overflow-hidden relative">
-                            <img src="./curriculum_3_2.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=Indoor+Group'">
+                            <img src="./curriculum_3_2.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=사진2'">
                         </div>
                         <div class="h-32 md:h-40 overflow-hidden relative">
-                            <img src="./curriculum_3_3.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=Communication'">
+                            <img src="./curriculum_3_3.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=사진3'">
                         </div>
                     </div>
                     <div class="p-8 md:p-10 text-center">
@@ -152,18 +149,16 @@
                         <p class="text-slate-500 leading-relaxed font-medium">몸과 마음 강의실 밖에서 만나는 사회 속에서의 나와 관계를 통해 가슴으로 배우는 여정</p>
                     </div>
                 </div>
-
-                <!-- Part 04 (이미지 콜라주) -->
                 <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 group hover:-translate-y-2 transition-all">
                     <div class="grid grid-cols-2 gap-1 bg-slate-50">
                         <div class="col-span-2 h-56 md:h-64 overflow-hidden relative">
-                            <img src="./curriculum_4_1.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/800x400?text=Ceremony'">
+                            <img src="./curriculum_4_1.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/800x400?text=사진을+업로드해주세요'">
                         </div>
                         <div class="h-32 md:h-40 overflow-hidden relative">
-                            <img src="./curriculum_4_2.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=Team+Building'">
+                            <img src="./curriculum_4_2.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=사진2'">
                         </div>
                         <div class="h-32 md:h-40 overflow-hidden relative">
-                            <img src="./curriculum_4_3.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=Fighting+Shot'">
+                            <img src="./curriculum_4_3.jpg" alt="활동" class="w-full h-full object-cover group-hover:scale-105 transition-all" onerror="this.src='https://via.placeholder.com/400x300?text=사진3'">
                         </div>
                     </div>
                     <div class="p-8 md:p-10 text-center">
@@ -176,55 +171,55 @@
         </div>
     </section>
 
-    <!-- People Section (멘토 상반신 강조 및 이름 수정) -->
+    <!-- People Section (깃허브의 '멘토_N.jpg' 파일명 반영 및 개별 배율 조정) -->
     <section id="people" class="py-32 bg-white relative z-10 text-center">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="font-jalnan text-4xl md:text-5xl font-black mb-20 text-slate-900">함께하는 분들</h2>
             
-            <!-- 메인 멘토 (류명진) -->
+            <!-- 메인 멘토 (류명진): 깃허브 파일명 '멘토_1.jpg' 반영 -->
             <div class="mb-32">
                 <div class="w-72 h-96 mx-auto rounded-[3rem] overflow-hidden shadow-2xl mb-8 border-4 border-white transform hover:scale-105 transition-transform duration-500">
-                    <img src="./mentor_1.jpg" alt="류명진" class="w-full h-full object-cover origin-top scale-[1.35]" onerror="this.src='https://via.placeholder.com/400x600?text=Mentor+1'">
+                    <img src="./멘토_1.jpg" alt="류명진" class="w-full h-full object-cover origin-top scale-[1.75]">
                 </div>
                 <h3 class="font-jalnan text-3xl font-black text-slate-900">류명진</h3>
                 <p class="text-blue-500 font-bold text-xl mt-3 uppercase tracking-[0.2em]">Main Mentor</p>
             </div>
 
-            <!-- 서브 멘토들 (인물 확대 및 이름 수정) -->
+            <!-- 서브 멘토들: 깃허브 파일명 '멘토_N.jpg' 반영 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
                 <div class="group">
                     <div class="mentor-img-container shadow-xl border border-slate-100">
-                        <img src="./mentor_2.jpg" alt="정수연" class="scale-[1.3] group-hover:scale-[1.4]">
+                        <img src="./멘토_2.jpg" alt="정수연" class="scale-[1.35]">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900 mt-6">정수연</h4>
                 </div>
                 <div class="group">
                     <div class="mentor-img-container shadow-xl border border-slate-100">
-                        <img src="./mentor_3.jpg" alt="남서연" class="scale-[1.3] group-hover:scale-[1.4]">
+                        <img src="./멘토_3.jpg" alt="남서연" class="scale-[1.35]">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900 mt-6">남서연</h4>
                 </div>
                 <div class="group">
                     <div class="mentor-img-container shadow-xl border border-slate-100">
-                        <img src="./mentor_4.jpg" alt="이현우" class="scale-[1.3] group-hover:scale-[1.4]">
+                        <img src="./멘토_4.jpg" alt="이현우" class="scale-[1.35]">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900 mt-6">이현우</h4>
                 </div>
                 <div class="group">
                     <div class="mentor-img-container shadow-xl border border-slate-100">
-                        <img src="./mentor_5.jpg" alt="김승필" class="scale-[1.3] group-hover:scale-[1.4]">
+                        <img src="./멘토_5.jpg" alt="김승필" class="scale-[1.1]">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900 mt-6">김승필</h4>
                 </div>
                 <div class="group">
                     <div class="mentor-img-container shadow-xl border border-slate-100">
-                        <img src="./mentor_6.jpg" alt="김현우" class="scale-[1.3] group-hover:scale-[1.4]">
+                        <img src="./멘토_6.jpg" alt="김현우" class="scale-[1.35]">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900 mt-6">김현우</h4>
                 </div>
                 <div class="group">
                     <div class="mentor-img-container shadow-xl border border-slate-100">
-                        <img src="./mentor_7.jpg" alt="김현정" class="scale-[1.3] group-hover:scale-[1.4]">
+                        <img src="./멘토_7.jpg" alt="김현정" class="scale-[1.45]">
                     </div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900 mt-6">김현정</h4>
                 </div>
@@ -232,7 +227,7 @@
         </div>
     </section>
 
-    <!-- Reviews Section (후기 4개 복구) -->
+    <!-- Reviews Section (깃허브의 'review_1.jpg' 반영) -->
     <section id="reviews" class="py-32 bg-slate-50 relative z-10 text-center">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="font-jalnan text-4xl md:text-5xl text-[#3b82f6] mb-20">뜨거운 감동 후기</h2>
@@ -241,7 +236,7 @@
                     <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-10 flex-grow break-keep">"단순히 지식 교육이 아니라 '나 자신'에 대해 먼저 고민하게 해준 것이 가장 좋았습니다. 나를 되돌아보는 소중한 시간이었습니다."</p>
                     <div class="w-full h-px bg-slate-100 mb-8"></div>
                     <div class="flex items-center gap-5">
-                        <img src="./review_1.jpg" alt="User" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User1'">
+                        <img src="./review_1.jpg" alt="김지우" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User1'">
                         <div><span class="block font-black text-slate-900 text-lg">김지우 님</span><span class="text-sm text-blue-500 font-bold">26세 / 취업준비생</span></div>
                     </div>
                 </div>
@@ -249,7 +244,7 @@
                     <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-10 flex-grow break-keep">"포기하고 싶을 때마다 혼자가 아니라는 생각이 들어서 큰 힘이 되었습니다. 선생님들의 진심 어린 조언이 터닝포인트가 되었어요."</p>
                     <div class="w-full h-px bg-slate-100 mb-8"></div>
                     <div class="flex items-center gap-5">
-                        <img src="./review_2.jpg" alt="User" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User2'">
+                        <img src="./review_2.jpg" alt="이민준" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User2'">
                         <div><span class="block font-black text-slate-900 text-lg">이민준 님</span><span class="text-sm text-blue-500 font-bold">29세 / 이직 준비</span></div>
                     </div>
                 </div>
@@ -257,7 +252,7 @@
                     <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-10 flex-grow break-keep">"강의가 끝난 후에도 지속되는 네트워킹이 정말 좋습니다. 실무에서 바로 쓸 수 있는 팁들을 많이 얻어가서 만족스럽습니다."</p>
                     <div class="w-full h-px bg-slate-100 mb-8"></div>
                     <div class="flex items-center gap-5">
-                        <img src="./review_3.jpg" alt="User" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User3'">
+                        <img src="./review_3.jpg" alt="박하늘" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User3'">
                         <div><span class="block font-black text-slate-900 text-lg">박하늘 님</span><span class="text-sm text-blue-500 font-bold">32세 / 프리랜서</span></div>
                     </div>
                 </div>
@@ -265,7 +260,7 @@
                     <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-10 flex-grow break-keep">"막연했던 미래가 구체적인 계획으로 바뀌는 경험을 했습니다. 커리큘럼이 탄탄해서 비전공자인 저도 잘 따라갈 수 있었습니다."</p>
                     <div class="w-full h-px bg-slate-100 mb-8"></div>
                     <div class="flex items-center gap-5">
-                        <img src="./review_4.jpg" alt="User" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User4'">
+                        <img src="./review_4.jpg" alt="최수진" class="w-16 h-16 rounded-full object-cover shadow-inner" onerror="this.src='https://via.placeholder.com/100x100?text=User4'">
                         <div><span class="block font-black text-slate-900 text-lg">최수진 님</span><span class="text-sm text-blue-500 font-bold">27세 / 사회초년생</span></div>
                     </div>
                 </div>
@@ -273,7 +268,7 @@
         </div>
     </section>
 
-    <!-- Contact Section (정확한 문구 반영) -->
+    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-white relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="bg-gradient-to-br from-blue-600 to-sky-400 rounded-[4rem] p-10 md:p-20 text-white shadow-3xl flex flex-col lg:flex-row gap-20">
