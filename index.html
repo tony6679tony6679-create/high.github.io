@@ -111,7 +111,8 @@
             <p class="text-2xl text-sky-100 mb-8 font-bold flex items-center justify-center tracking-wide">
                 <span class="mr-2 text-3xl">🙌</span> 2026년 5월 18일
             </p>
-            <p class="font-jalnan text-3xl sm:text-5xl text-white mb-12 drop-shadow-lg leading-tight">나를 한 단계 더 성장시키는 5월</p>
+            <!-- 모바일 폰트 크기 조정 및 줄바꿈 최적화 -->
+            <p class="font-jalnan text-2xl sm:text-5xl text-white mb-12 drop-shadow-lg leading-tight break-keep px-4">나를 한 단계 더 성장시키는 5월</p>
         </div>
         
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180">
@@ -121,13 +122,13 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Stats Section (요청하신대로 '누적' 텍스트 제거) -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
                 <div class="flex flex-col items-center">
-                    <div class="flex items-baseline mb-2">
-                        <span class="text-blue-500 font-bold text-xl mr-1 font-jalnan">누적</span>
+                    <div class="mb-2">
+                        <!-- '누적' 삭제 및 숫자만 강조 -->
                         <span class="text-blue-600 font-black text-4xl md:text-5xl tracking-tighter">1023+</span>
                     </div>
                     <p class="text-slate-400 font-bold text-sm uppercase">함께한 청년 수</p>
@@ -184,7 +185,7 @@
         </div>
     </section>
 
-    <!-- Curriculum Section (사진 4개 그리드 버전) -->
+    <!-- Curriculum Section -->
     <section id="curriculum" class="py-24 bg-white relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -194,59 +195,56 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Part 01 -->
-                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all">
+                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
                     <div class="edu-grid">
                         <div class="edu-img-box"><img src="edu_01_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-1'"></div>
                         <div class="edu-img-box"><img src="edu_01_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-2'"></div>
                         <div class="edu-img-box"><img src="edu_01_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-3'"></div>
                         <div class="edu-img-box"><img src="edu_01_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-4'"></div>
                     </div>
-                    <div class="p-8 md:p-10 text-center">
+                    <div class="p-8 md:p-10">
                         <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 01</span>
                         <h3 class="font-jalnan text-2xl md:text-3xl font-black mb-4 text-slate-900 uppercase break-keep">강사님의 명쾌한 강의</h3>
                         <p class="text-slate-500 leading-relaxed font-medium break-keep">끝없는 인문학과 답없는 질문 속에 명쾌한 답을 가진 기준을 가지고 삶과 나 자신을 찾아가는 명쾌한 강연의 시간</p>
                     </div>
                 </div>
-
                 <!-- Part 02 -->
-                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all">
+                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
                     <div class="edu-grid">
                         <div class="edu-img-box"><img src="edu_02_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-1'"></div>
                         <div class="edu-img-box"><img src="edu_02_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-2'"></div>
                         <div class="edu-img-box"><img src="edu_02_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-3'"></div>
                         <div class="edu-img-box"><img src="edu_02_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-4'"></div>
                     </div>
-                    <div class="p-8 md:p-10 text-center">
+                    <div class="p-8 md:p-10">
                         <span class="inline-block px-4 py-1.5 bg-sky-50 text-sky-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 02</span>
                         <h3 class="font-jalnan text-2xl md:text-3xl font-black mb-4 text-slate-900 uppercase break-keep">탐구와 나눔을 통한 성장</h3>
                         <p class="text-slate-500 leading-relaxed font-medium break-keep">여태까지 들어왔던 일방적인 강연과 주입식 교육이 아닌 나눔과 질문 소통과 생각을 통한 나의 깨달음을 얻는 시간</p>
                     </div>
                 </div>
-
                 <!-- Part 03 -->
-                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all">
+                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
                     <div class="edu-grid">
                         <div class="edu-img-box"><img src="edu_03_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-1'"></div>
                         <div class="edu-img-box"><img src="edu_03_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-2'"></div>
                         <div class="edu-img-box"><img src="edu_03_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-3'"></div>
                         <div class="edu-img-box"><img src="edu_03_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-4'"></div>
                     </div>
-                    <div class="p-8 md:p-10 text-center">
+                    <div class="p-8 md:p-10">
                         <span class="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 03</span>
                         <h3 class="font-jalnan text-2xl md:text-3xl font-black mb-4 text-slate-900 uppercase break-keep">체험을 통한 다양한 경험</h3>
                         <p class="text-slate-500 leading-relaxed font-medium break-keep">몸과 마음 강의실 밖에서 만나는 사회 속에서의 나와 관계를 통해 가슴으로 배우는 여정</p>
                     </div>
                 </div>
-
                 <!-- Part 04 -->
-                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all">
+                <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
                     <div class="edu-grid">
                         <div class="edu-img-box"><img src="edu_04_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=04-1'"></div>
                         <div class="edu-img-box"><img src="edu_04_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=04-2'"></div>
                         <div class="edu-img-box"><img src="edu_04_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=04-3'"></div>
                         <div class="edu-img-box"><img src="edu_04_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=04-4'"></div>
                     </div>
-                    <div class="p-8 md:p-10 text-center">
+                    <div class="p-8 md:p-10">
                         <span class="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 04</span>
                         <h3 class="font-jalnan text-2xl md:text-3xl font-black mb-4 text-slate-900 uppercase break-keep">소규모 프로그램 활동</h3>
                         <p class="text-slate-500 leading-relaxed font-medium break-keep">삶의 가장 기본적인 요건 중에 내가 원하는 작고 소중한 삶 함께하는 기쁨</p>
@@ -261,6 +259,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="font-jalnan text-4xl md:text-5xl font-black mb-20 text-slate-900 uppercase">함께하는 분들</h2>
             
+            <!-- 메인 멘토 (류명진) -->
             <div class="mb-32">
                 <div class="w-72 h-96 mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white transform hover:scale-105 transition-transform bg-white">
                     <img src="mentor_1.jpg" alt="류명진" class="w-full h-full object-cover origin-top scale-[2.05]" onerror="this.src='https://via.placeholder.com/400x600?text=mentor_1.jpg'">
@@ -269,7 +268,7 @@
                 <p class="text-blue-500 font-bold text-xl mt-3 uppercase tracking-[0.2em]">Main Mentor</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto px-4">
                 <div class="group">
                     <div class="mentor-img-container"><img src="mentor_2.jpg" alt="정수연" class="scale-[1.6]"></div>
                     <h4 class="font-jalnan text-2xl font-bold text-slate-900 mt-6 uppercase">정수연</h4>
@@ -299,7 +298,7 @@
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="py-32 bg-slate-50 relative z-10 text-center">
+    <section id="reviews" class="py-32 bg-slate-50 relative z-10 text-center px-4">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="font-jalnan text-4xl md:text-5xl text-[#3b82f6] mb-20 uppercase">뜨거운 감동 후기</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -339,12 +338,13 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-white relative z-10">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- Contact Section (모바일 폰트 크기 및 줄바꿈 최적화) -->
+    <section id="contact" class="py-24 bg-white relative z-10 px-4">
+        <div class="max-w-7xl mx-auto">
             <div class="bg-gradient-to-br from-blue-600 to-sky-400 rounded-[4rem] p-10 md:p-20 text-white shadow-3xl flex flex-col lg:flex-row gap-20">
                 <div class="lg:w-2/5 text-center lg:text-left flex flex-col justify-center">
-                    <h2 class="font-jalnan text-5xl mb-8 leading-tight uppercase">궁금한점이<br>있으실까요?</h2>
+                    <!-- 모바일에서 줄바꿈이 깔끔하게 폰트 크기 조정 -->
+                    <h2 class="font-jalnan text-3xl sm:text-5xl mb-8 leading-tight uppercase break-keep">궁금한점이 있으실까요?</h2>
                     <p class="text-sky-50 text-xl font-medium break-keep uppercase">비공개 문의 게시판입니다. 작성하신 정보는 안전하게 확인됩니다.</p>
                 </div>
                 <div class="lg:w-3/5 bg-white/95 p-8 md:p-12 rounded-[3rem] text-slate-900 shadow-2xl">
