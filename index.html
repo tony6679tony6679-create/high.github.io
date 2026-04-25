@@ -27,7 +27,7 @@
         
         .break-keep { word-break: keep-all; }
         
-        /* 멘토 이미지 컨테이너: 배경 흰색 및 꽉 채우기 설정 */
+        /* 멘토 이미지 컨테이너 */
         .mentor-img-container {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -58,7 +58,7 @@
             aspect-ratio: 4 / 3;
             overflow: hidden;
             border-radius: 1rem;
-            background-color: #e2e8f0;
+            background-color: #e2e8f0; /* 이미지가 깃허브에 없을 때 나타나는 회색 배경 */
         }
         .edu-img-box img {
             width: 100%;
@@ -159,7 +159,7 @@
         </div>
     </section>
 
-    <!-- About Section (image_e12259.png 스타일 고정) -->
+    <!-- About Section (복구 완료: image_e12259.png 스타일) -->
     <section id="about" class="py-24 bg-slate-50 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-16">
             <div class="flex-1 w-full text-center">
@@ -200,7 +200,7 @@
         </div>
     </section>
 
-    <!-- Curriculum Section (요청하신 파일명 순차 정리 적용) -->
+    <!-- Curriculum Section (파일명 최종 정리) -->
     <section id="curriculum" class="py-24 bg-white relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -209,13 +209,13 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                <!-- Part 01 (파일명: edu_01_1.jpg ~ edu_01_4.jpg) -->
+                <!-- Part 01 -->
                 <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
                     <div class="edu-grid">
-                        <div class="edu-img-box"><img src="edu_01_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-1'"></div>
-                        <div class="edu-img-box"><img src="edu_01_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-2'"></div>
-                        <div class="edu-img-box"><img src="edu_01_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-3'"></div>
-                        <div class="edu-img-box"><img src="edu_01_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=01-4'"></div>
+                        <div class="edu-img-box"><img src="edu_01_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_01_1'"></div>
+                        <div class="edu-img-box"><img src="edu_01_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_01_2'"></div>
+                        <div class="edu-img-box"><img src="edu_01_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_01_3'"></div>
+                        <div class="edu-img-box"><img src="edu_01_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_01_4'"></div>
                     </div>
                     <div class="p-8 md:p-10">
                         <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 01</span>
@@ -224,13 +224,13 @@
                     </div>
                 </div>
 
-                <!-- Part 02 (파일명: edu_02_1.jpg ~ edu_02_4.jpg) -->
+                <!-- Part 02 -->
                 <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
                     <div class="edu-grid">
-                        <div class="edu-img-box"><img src="edu_02_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-1'"></div>
-                        <div class="edu-img-box"><img src="edu_02_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-2'"></div>
-                        <div class="edu-img-box"><img src="edu_02_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-3'"></div>
-                        <div class="edu-img-box"><img src="edu_02_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=02-4'"></div>
+                        <div class="edu-img-box"><img src="edu_02_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_02_1'"></div>
+                        <div class="edu-img-box"><img src="edu_02_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_02_2'"></div>
+                        <div class="edu-img-box"><img src="edu_02_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_02_3'"></div>
+                        <div class="edu-img-box"><img src="edu_02_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_02_4'"></div>
                     </div>
                     <div class="p-8 md:p-10">
                         <span class="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 02</span>
@@ -239,13 +239,13 @@
                     </div>
                 </div>
 
-                <!-- Part 03 (파일명: edu_03_1.jpg ~ edu_03_4.jpg) -->
+                <!-- Part 03 -->
                 <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center md:col-span-2 lg:col-span-1">
                     <div class="edu-grid">
-                        <div class="edu-img-box"><img src="edu_03_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-1'"></div>
-                        <div class="edu-img-box"><img src="edu_03_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-2'"></div>
-                        <div class="edu-img-box"><img src="edu_03_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-3'"></div>
-                        <div class="edu-img-box"><img src="edu_03_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=03-4'"></div>
+                        <div class="edu-img-box"><img src="edu_03_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_03_1'"></div>
+                        <div class="edu-img-box"><img src="edu_03_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_03_2'"></div>
+                        <div class="edu-img-box"><img src="edu_03_3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_03_3'"></div>
+                        <div class="edu-img-box"><img src="edu_03_4.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_03_4'"></div>
                     </div>
                     <div class="p-8 md:p-10">
                         <span class="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 03</span>
