@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="naver-site-verification" content="1bbc1f36cbbf4a5ac55da8aab1a047d6f2f4a19c" />
     <title>High Five - EAR CENTER</title>
-    <!-- 트렌디한 폰트 적용 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -46,7 +44,7 @@
             transition: transform 0.5s ease;
         }
 
-        /* 교육 과정 이미지 그리드 스타일 (순서 변경에 따른 테두리 둥글기 하단으로 이동) */
+        /* 교육 과정 이미지 그리드 스타일 (텍스트 하단 배치용) */
         .edu-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -59,7 +57,7 @@
             aspect-ratio: 4 / 3;
             overflow: hidden;
             border-radius: 1rem;
-            background-color: #e2e8f0; /* 이미지가 깃허브에 없을 때 나타나는 회색 배경 */
+            background-color: #e2e8f0;
         }
         .edu-img-box img {
             width: 100%;
@@ -92,7 +90,6 @@
 </head>
 <body class="min-h-screen overflow-x-hidden text-slate-900">
 
-    <!-- Navigation -->
     <nav id="main-nav" class="fixed w-full z-50 transition-all duration-300 h-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
             <div class="flex-shrink-0">
@@ -108,7 +105,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-blue-500 to-sky-400 text-white overflow-hidden text-center">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="mx-auto w-[280px] sm:w-[400px] bg-white p-10 rounded-[3rem] shadow-2xl mb-12 transform -rotate-2 hover:rotate-0 transition-all duration-500">
@@ -127,7 +123,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
@@ -160,11 +155,9 @@
         </div>
     </section>
 
-    <!-- About Section (이미지 짤림 문제 해결) -->
     <section id="about" class="py-24 bg-slate-50 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-16">
             <div class="flex-1 w-full text-center">
-                <!-- aspect-square를 제거하고 h-auto를 사용하여 사진이 위아래로 잘리지 않게 조정 -->
                 <div class="max-w-md mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white rotate-3 hover:rotate-0 transition-all duration-500 bg-gradient-to-br from-blue-300 to-indigo-400">
                     <img src="about_team.jpg" alt="About" class="w-full h-auto object-contain" onerror="this.src='https://via.placeholder.com/800x800?text=About+Us+Photo'">
                 </div>
@@ -202,7 +195,6 @@
         </div>
     </section>
 
-    <!-- Curriculum Section (텍스트와 사진 순서 변경 완료) -->
     <section id="curriculum" class="py-24 bg-white relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -211,15 +203,12 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                <!-- Part 01 -->
                 <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
-                    <!-- 텍스트를 위로 이동 -->
                     <div class="p-8 md:p-10 flex-grow">
                         <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 01</span>
                         <h3 class="font-jalnan text-2xl font-black mb-4 text-slate-900 uppercase break-keep">강사님의 명쾌한 강의</h3>
                         <p class="text-slate-500 leading-relaxed font-medium break-keep text-sm md:text-base">끝없는 인문학과 답없는 질문 속에 명쾌한 답을 가진 기준을 가지고 삶과 나 자신을 찾아가는 명쾌한 강연의 시간</p>
                     </div>
-                    <!-- 사진 그리드를 아래로 이동 -->
                     <div class="edu-grid">
                         <div class="edu-img-box"><img src="edu_01_1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_01_1'"></div>
                         <div class="edu-img-box"><img src="edu_01_2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=edu_01_2'"></div>
@@ -228,7 +217,6 @@
                     </div>
                 </div>
 
-                <!-- Part 02 -->
                 <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center">
                     <div class="p-8 md:p-10 flex-grow">
                         <span class="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 02</span>
@@ -243,7 +231,6 @@
                     </div>
                 </div>
 
-                <!-- Part 03 -->
                 <div class="edu-card bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full hover:-translate-y-2 transition-all text-center md:col-span-2 lg:col-span-1">
                     <div class="p-8 md:p-10 flex-grow">
                         <span class="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-sm font-black rounded-full mb-5 tracking-widest uppercase">Part 03</span>
@@ -261,22 +248,21 @@
         </div>
     </section>
 
-    <!-- People Section (사진 짤림 보정 완료) -->
     <section id="people" class="py-32 bg-white relative z-10 text-center px-4">
         <div class="max-w-7xl mx-auto">
             <h2 class="font-jalnan text-4xl md:text-5xl font-black mb-20 text-slate-900 uppercase">함께하는 분들</h2>
             
-            <!-- 메인 멘토 (류명진) -->
             <div class="mb-48 max-w-2xl mx-auto text-center">
                 <div class="w-72 h-96 mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white transform hover:scale-105 transition-transform bg-white mb-8">
-                    <!-- 류명진: 머리 윗부분이 잘리지 않도록 배율과 위치 조정 -->
                     <img src="mentor_1.jpg" alt="류명진" class="w-full h-full object-cover scale-[1.15]" style="object-position: center 30%;">
                 </div>
                 <div class="inline-block px-6 py-2 bg-blue-600 text-white rounded-full font-black text-sm mb-4 shadow-lg uppercase tracking-widest">MAIN MENTOR</div>
                 <h3 class="font-jalnan text-4xl font-black text-slate-900 mb-6 uppercase">류명진</h3>
                 <p class="font-soft text-slate-500 text-xl leading-relaxed mb-10 break-keep italic profile-quote">"성장은 혼자가 아니라 함께일 때 더 깊어집니다."</p>
                 <div class="space-y-2 text-slate-700 font-bold text-lg mb-10">
-                    <p>전문 심리상담</p><p>색채심리상담</p><p>인문학 강의</p>
+                    <p>전문 심리상담</p>
+                    <p>C.R.R 전문가</p>
+                    <p>인문학 강사</p>
                 </div>
                 <div class="hashtag-box shadow-inner">
                     <span class="text-blue-600 font-black text-lg mx-2">#솔직담백</span>
@@ -285,9 +271,7 @@
                 </div>
             </div>
 
-            <!-- 매니저 팀 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-32 gap-x-12 max-w-6xl mx-auto">
-                <!-- 1. 정수연 -->
                 <div class="flex flex-col items-center">
                     <div class="mentor-img-container mb-8"><img src="mentor_2.jpg" alt="정수연" class="scale-[1.25]" style="object-position: center 20%;"></div>
                     <h4 class="font-jalnan text-3xl font-black text-slate-900 mb-1 uppercase">정수연</h4>
@@ -300,7 +284,6 @@
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#진심</span>
                     </div>
                 </div>
-                <!-- 2. 남서연 -->
                 <div class="flex flex-col items-center">
                     <div class="mentor-img-container mb-8"><img src="mentor_3.jpg" alt="남서연" class="scale-[1.3]" style="object-position: center 20%;"></div>
                     <h4 class="font-jalnan text-3xl font-black text-slate-900 mb-1 uppercase">남서연</h4>
@@ -312,7 +295,6 @@
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#초긍정</span>
                     </div>
                 </div>
-                <!-- 3. 이현우 -->
                 <div class="flex flex-col items-center">
                     <div class="mentor-img-container mb-8"><img src="mentor_4.jpg" alt="이현우" class="scale-[1.2]" style="object-position: center 20%;"></div>
                     <h4 class="font-jalnan text-3xl font-black text-slate-900 mb-1 uppercase">이현우</h4>
@@ -325,12 +307,11 @@
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#부드러움</span>
                     </div>
                 </div>
-                <!-- 4. 김승필 -->
                 <div class="flex flex-col items-center">
                     <div class="mentor-img-container mb-8"><img src="mentor_5.jpg" alt="김승필" class="scale-[1.2]" style="object-position: center 20%;"></div>
                     <h4 class="font-jalnan text-3xl font-black text-slate-900 mb-1 uppercase">김승필</h4>
                     <p class="text-sky-400 font-black text-sm mb-4 uppercase tracking-widest">MANAGER</p>
-                    <div class="text-slate-500 font-bold text-base leading-relaxed mb-6 h-12 break-keep">프레디저상담,강의자<br>심리상담사</div>
+                    <div class="text-slate-500 font-bold text-base leading-relaxed mb-6 h-12 break-keep">프레디저상담,강의자<br>전문급 심리 상담사</div>
                     <div class="flex flex-wrap justify-center gap-2 px-4">
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#스며들다</span>
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#시골청년</span>
@@ -338,12 +319,12 @@
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#세상편함</span>
                     </div>
                 </div>
-                <!-- 5. 김현우 -->
                 <div class="flex flex-col items-center">
                     <div class="mentor-img-container mb-8"><img src="mentor_6.jpg" alt="김현우" class="scale-[1.2]" style="object-position: center 20%;"></div>
                     <h4 class="font-jalnan text-3xl font-black text-slate-900 mb-1 uppercase">김현우</h4>
                     <p class="text-sky-400 font-black text-sm mb-4 uppercase tracking-widest">MANAGER</p>
-                    <div class="text-slate-500 font-bold text-base leading-relaxed mb-6 h-12 break-keep">한국능력개발 진흥원 전문급 심리상담사<br>초중고 외부강사</div>
+                    <div class="text-slate-500 font-bold text-base leading-relaxed mb-6 h-12 break-keep">
+                        전문급 심리상담사<br>초중고 진로 코칭강사 </div>
                     <div class="flex flex-wrap justify-center gap-2 px-4">
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#긍정에너지</span>
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#꾸준함</span>
@@ -351,12 +332,8 @@
                         <span class="px-3 py-1 border border-sky-100 text-sky-400 rounded-full text-xs font-black">#운동킹</span>
                     </div>
                 </div>
-                <!-- 6. 김현정 -->
                 <div class="flex flex-col items-center">
-                    <div class="mentor-img-container mb-8">
-                        <!-- 김현정: 머리 윗부분이 잘리지 않도록 배율 낮추고 위치 조정 -->
-                        <img src="mentor_7.jpg" alt="김현정" class="scale-[1.15]" style="object-position: center 20%;">
-                    </div>
+                    <div class="mentor-img-container mb-8"><img src="mentor_7.jpg" alt="김현정" class="scale-[1.15]" style="object-position: center 20%;"></div>
                     <h4 class="font-jalnan text-3xl font-black text-slate-900 mb-1 uppercase">김현정</h4>
                     <p class="text-sky-400 font-black text-sm mb-4 uppercase tracking-widest">MANAGER</p>
                     <div class="text-slate-500 font-bold text-base leading-relaxed mb-6 h-12 break-keep">전문급 심리상담사<br>퍼스널 브랜딩 코치</div>
@@ -371,10 +348,9 @@
         </div>
     </section>
 
-    <!-- Reviews Section -->
     <section id="reviews" class="py-32 bg-slate-50 relative z-10 text-center px-4">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-jalnan text-3xl sm:text-5xl text-[#3b82f6] mb-20 uppercase break-all">"추천합니다"</h2>
+            <h2 class="font-jalnan text-3xl sm:text-5xl text-[#3b82f6] mb-20 uppercase break-all">"제가 이렇게 달라졌어요"</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-10 rounded-[3rem] shadow-lg flex flex-col h-full hover:-translate-y-3 transition-all duration-300 text-left border border-slate-100">
                     <p class="font-soft text-slate-800 text-lg font-bold leading-relaxed mb-10 flex-grow break-keep">"단순히 지식 교육이 아니라 '나 자신'에 대해 먼저 고민하게 해준 것이 가장 좋았습니다. 나를 되돌아보는 소중한 시간이었습니다."</p>
@@ -412,7 +388,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-white relative z-10 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="bg-gradient-to-br from-blue-600 to-sky-400 rounded-[4rem] p-10 md:p-20 text-white shadow-3xl flex flex-col lg:flex-row gap-20">
@@ -434,13 +409,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-16 bg-white border-t border-slate-100 text-center">
         <span class="text-xl font-black text-slate-300 tracking-widest uppercase font-jalnan">EAR CENTER</span>
         <p class="text-slate-400 font-bold mt-4 uppercase">&copy; 2026 EAR CENTER. All rights reserved.</p>
     </footer>
 
-    <!-- Scroll Top Button -->
     <button id="scrollTopBtn" class="fixed bottom-10 right-10 bg-blue-600 text-white w-16 h-16 rounded-full shadow-2xl opacity-0 transition-all z-50 flex items-center justify-center hover:scale-110 active:scale-90 focus:outline-none uppercase">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
