@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>High Five - EAR CENTER</title>
+    <link>https://high-five-up.com</link>
+    <description>당신의 가능성을 발견하고 진짜 나를 찾는 시간, 하이파이브 아카데미입니다.</description>
+    <language>ko</language>
+    <pubDate>Tue, 28 Apr 2026 17:00:00 +0900</pubDate>
+    <item>
+      <title>High Five 아카데미 소개</title>
+      <link>https://high-five-up.com</link>
+      <description>청년들의 성장을 돕는 이어센터 하이파이브의 전문적인 심리 코칭 프로그램을 소개합니다.</description>
+      <pubDate>Tue, 28 Apr 2026 17:00:00 +0900</pubDate>
+      <guid>https://high-five-up.com</guid>
+    </item>
+  </channel>
+</rss>
